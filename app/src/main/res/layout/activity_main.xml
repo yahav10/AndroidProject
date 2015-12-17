@@ -29,4 +29,24 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2"
+        android:layout_marginTop="63dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New RadioButton"
+        android:id="@+id/radioButton"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
 </RelativeLayout>
