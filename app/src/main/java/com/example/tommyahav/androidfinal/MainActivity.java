@@ -33,13 +33,11 @@ public class MainActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("signUpButton was clicked");
-                Intent intent = new Intent( getApplicationContext() , managerSignUp.class );
+                Intent intent = new Intent(getApplicationContext(),signUplayout.class);
                 startActivity(intent);
             }
         });
     }
-
-
 
     //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {

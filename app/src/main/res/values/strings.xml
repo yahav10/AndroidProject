@@ -1,11 +1,26 @@
 <resources>
-    <string name="app_name">AndroidFinal</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Tasks</string>
     <string name="action_settings">Settings</string>
-    <string name="invite_send_button">Invite and Send</string>
+    <string name="email_login">Email Address</string>
     <string name="password_login">Password</string>
-    <string name="email_login">Email</string>
-    <string name="logo">Logo</string>
-    <string name="signup_button">Sign Up</string>
-    <string name="alreadyMember_button">Already a member</string>
+    <string name="login_button">Login</string>
+    <string name="signUp_button">Sign Up</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="group_tasks_button">Group Tasks</string>
+    <string name="create_tasks_button">Create Task</string>
+    <string name="tasks_list_button">Tasks List</string>
+    <string name="group_info_button">Group Info</string>
+    <string name="title_activity_signup">signup</string>
+    <string name="signup_button">Create Account</string>
+    <string name="alreadyMember_button">Already a member? Login</string>
+    <string name="logo">logo</string>
+    <string name="title_activity_sign_uplayout">signUplayout</string>
+    <string name="email_signup">Email Address</string>
+    <string name="password_signup">Enter Your Password</string>
+    <string name="verify_signup">Verify Password</string>
+    <string name="phone_signup">Phone Number</string>
+    <string name="groupName_signup">New Group Name</string>
+    <string name="title_activity_invite_friends">inviteFriends</string>
+    <string name="invite_send_button">Send Invitations</string>
+
 </resources>
