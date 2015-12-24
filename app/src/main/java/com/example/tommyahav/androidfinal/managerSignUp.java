@@ -1,40 +1,42 @@
 package com.example.tommyahav.androidfinal;
 
+/**
+ * Created by TomGoldberg on 20.12.15.
+ */
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+public class managerSignUp extends AppCompatActivity {
 
-    private static final String LOG = "MainActivity";
+    private static final String LOG = "managerSignUp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.i(LOG , "onCreate()");
+        setContentView(R.layout.activity_sign_uplayout);
+        Log.i(LOG, "onCreate()");
 
         //logInButton event listender
-        Button logInButton = (Button)findViewById(R.id.loginBottun);
-        logInButton.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View v) {
-                System.out.println("logInButton was clicked");
-            }
-        });
+//        Button logInButton = (Button)findViewById(R.id.managerSignUpButton);
+//        logInButton.setOnClickListener(new Button.OnClickListener() {
+//            public void onClick(View v) {
+//                System.out.println("logInButton was clicked");
+//            }
+//        });
 
-        //signUpButton event listener
-        Button signUpButton = (Button)findViewById(R.id.signUp_button);
-        signUpButton.setOnClickListener(new Button.OnClickListener() {
+        //managerSignUpButton event listener
+        Button createAccountButton = (Button)findViewById(R.id.createAccountButton);
+        createAccountButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                System.out.println("signUpButton was clicked");
-                Intent to_managerSignUp = new Intent( getApplicationContext() , managerSignUp.class);
-                startActivity(to_managerSignUp);
+                System.out.println("managerSignUpButton was clicked");
+                Intent intent = new Intent(getApplicationContext(), managerInviteFriends.class);
+                startActivity(intent);
             }
         });
     }

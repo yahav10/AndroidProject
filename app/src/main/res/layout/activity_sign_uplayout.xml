@@ -75,7 +75,7 @@
         <!--android:textColor="#ffffff" />-->
 
     <Button
-        android:id="@+id/angry_btn"
+        android:id="@+id/createAccountButton"
         android:text="@string/signup_button"
         android:textColor="#666565"
         android:textSize="20sp"

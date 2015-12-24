@@ -17,14 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".signUplayout"
-            android:label="@string/title_activity_sign_uplayout" >
-        </activity>
-        <activity
-            android:name=".inviteFriends"
-            android:label="@string/title_activity_invite_friends" >
-        </activity>
+        <activity android:name=".managerInviteFriends"></activity>
+        <activity android:name=".managerSignUp"></activity>
+        <activity android:name=".manager_menu"></activity>
     </application>
 
 </manifest>
