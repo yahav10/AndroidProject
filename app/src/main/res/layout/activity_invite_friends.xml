@@ -11,7 +11,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/InviteFriendsLinearLayout"
+        android:weightSum="1">
     <ImageView android:src="@drawable/logonew1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -21,10 +23,10 @@
         android:id="@+id/logo"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/invite_header"
+        android:id="@+id/inviteMembersLabel"
         android:layout_below="@+id/logo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -39,8 +41,8 @@
         android:layout_height="40dp"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText"
-        android:layout_below="@+id/invite_header"
+        android:id="@+id/FriendEmailTextField_inviteFriends"
+        android:layout_below="@+id/inviteMembersLabel"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="5dp"
@@ -53,42 +55,37 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:text="Add Member"
-        android:id="@+id/createAccountButton"
+        android:id="@+id/addMemberButton_fromInviteMembers"
         android:background="@drawable/button"
         android:textColor="#212121"
         android:textSize="20sp"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/FriendEmailTextField_inviteFriends"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="75dp" />
-    <EditText
-        android:inputType="textMultiLine"
-        android:lines="8"
-        android:minLines="6"
-        android:gravity="top|left"
-        android:maxLines="10"
-        android:layout_height="160dp"
-        android:layout_width="fill_parent"
-        android:scrollbars="vertical"
-        android:background="@drawable/back"
-        android:id="@+id/editText2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/createAccountButton"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp" />
 
-    <Button
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/membersListViewToInvite_InviteFriends"
+            android:background="#ffffff"
+            android:divider="#114f76"
+            android:dividerHeight="1dp"
+            android:choiceMode="singleChoice"
+            android:layout_marginTop="5dp" />
+
+        <Button
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:text="@string/invite_send_button"
-        android:id="@+id/createAccountButton"
+        android:id="@+id/sendInvitationsButton_fromInviteFriends"
         android:background="@drawable/button"
         android:textColor="#212121"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 
 </RelativeLayout>
