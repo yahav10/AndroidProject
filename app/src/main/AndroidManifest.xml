@@ -18,14 +18,6 @@
         <activity android:name=".managerInviteFriends" />
         <activity android:name=".managerSignUp" />
         <activity android:name=".manager_menu" />
-        <activity
-            android:name=".group_tasks_Manager"
-            android:label="@string/title_activity_task__list__manager" >
-        </activity>
-        <activity
-            android:name=".group_info_Manager"
-            android:label="@string/title_activity_group_info__manager" >
-        </activity>
     </application>
 
 </manifest>

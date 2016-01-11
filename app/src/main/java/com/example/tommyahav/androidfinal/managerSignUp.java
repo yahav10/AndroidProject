@@ -31,7 +31,7 @@ public class managerSignUp extends AppCompatActivity {
 //        });
 
         //managerSignUpButton event listener
-        Button createAccountButton = (Button)findViewById(R.id.createAccountButton);
+        Button createAccountButton = (Button)findViewById(R.id.addMemberButton_fromInviteMembers);
         createAccountButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("managerSignUpButton was clicked");
@@ -60,6 +60,7 @@ public class managerSignUp extends AppCompatActivity {
             return true;
         }
 
+        Log.i(LOG, "onOptionsItemSelected()");
         return super.onOptionsItemSelected(item);
     }
 

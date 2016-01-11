@@ -13,12 +13,13 @@ public class group_info_Manager extends AppCompatActivity {
         setContentView(R.layout.activity_group_info__manager);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_group_info__manager, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_group_info__manager, menu);
+//        return true;
+//
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
