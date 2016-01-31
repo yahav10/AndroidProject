@@ -22,5 +22,6 @@
     <string name="groupName_signup">New Group Name</string>
     <string name="title_activity_invite_friends">inviteFriends</string>
     <string name="invite_send_button">Send Invitations</string>
+    <string name="recycle_view1">Recycle View1</string>
 
 </resources>

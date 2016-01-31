@@ -1,9 +1,12 @@
 package com.example.tommyahav.androidfinal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class manager_menu extends AppCompatActivity {
 
@@ -11,6 +14,18 @@ public class manager_menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_menu);
+
+        //group info event listener
+        Button groupInfoButton = (Button)findViewById(R.id.groupInfo_button);
+        groupInfoButton.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("groupInfo_button was clicked");
+                Intent to_group_info = new Intent( getApplicationContext() , group_info_Manager.class);
+                startActivity(to_group_info);
+            }
+        });
+
+
     }
 
     @Override
