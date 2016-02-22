@@ -84,8 +84,8 @@
         android:layout_height="35dp"
         android:text="INVITE"
         android:background="@drawable/button"
-        android:id="@+id/invite_groupInfo_Manager"
-        android:layout_above="@+id/recycle_group_info"
+        android:id="@+id/invite_groupInfo_Manager_Button"
+        android:layout_above="@+id/recycle_group_info_invitebutton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textSize="10sp" />

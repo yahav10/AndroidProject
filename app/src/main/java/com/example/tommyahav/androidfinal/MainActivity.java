@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("signUpButton was clicked");
                 Intent to_managerSignUp = new Intent( getApplicationContext() , managerSignUp.class);
                 startActivity(to_managerSignUp);
+                finish();
             }
         });
     }

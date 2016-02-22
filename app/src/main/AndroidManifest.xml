@@ -19,6 +19,6 @@
         <activity android:name=".managerSignUp" />
         <activity android:name=".manager_menu" />
         <activity android:name=".group_tasks_Manager"/>
+        <activity android:name=".group_info_Manager"/>
     </application>
-
 </manifest>

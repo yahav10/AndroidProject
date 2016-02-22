@@ -57,6 +57,7 @@ public class managerInviteFriends extends  Activity {
                 System.out.println("sendInvitationsButton_fromInviteFriends was clicked");
                 Intent to_managerMainMenu = new Intent(getApplicationContext(),manager_menu.class);
                 startActivity(to_managerMainMenu);
+                finish();
 
             }
         });

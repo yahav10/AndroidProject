@@ -31,12 +31,14 @@ public class managerSignUp extends AppCompatActivity {
 //        });
 
         //managerSignUpButton event listener
-        Button createAccountButton = (Button)findViewById(R.id.addMemberButton_fromInviteMembers);
+        Button createAccountButton = (Button)findViewById(R.id.createAccountButton_activity_sign_up);
         createAccountButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("managerSignUpButton was clicked");
                 Intent intent = new Intent(getApplicationContext(), managerInviteFriends.class);
                 startActivity(intent);
+                finish();
+
             }
         });
     }

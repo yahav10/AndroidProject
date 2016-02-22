@@ -37,7 +37,7 @@
         android:layout_height="40dp"
         android:inputType="textPassword"
         android:hint="Password"
-        android:background="#ffffff"
+        android:background="@drawable/round_edit_text"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="0dp" />
 
@@ -46,16 +46,17 @@
         android:layout_height="40dp"
         android:inputType="textPassword"
         android:hint="Verify Password"
-        android:background="#ffffff"
+        android:background="@drawable/round_edit_text"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="0dp" />
+        android:layout_marginTop="0dp"
+        />
 
     <EditText android:id="@+id/phone_signup"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:inputType="phone"
         android:hint="Phone Number"
-        android:background="#ffffff"
+        android:background="@drawable/round_edit_text"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="0dp" />
 
@@ -64,7 +65,7 @@
         android:layout_height="40dp"
         android:inputType="text"
         android:hint="New Group Name"
-        android:background="#ffffff"
+        android:background="@drawable/round_edit_text"
         android:layout_marginTop="0dp" />
 
     <!--<android.support.v7.widget.AppCompatButton-->
@@ -78,7 +79,7 @@
         <!--android:textColor="#ffffff" />-->
 
     <Button
-        android:id="@+id/addMemberButton_fromInviteMembers"
+        android:id="@+id/createAccountButton.activity_sign_up"
         android:text="@string/signup_button"
         android:textColor="#666565"
         android:textSize="20sp"

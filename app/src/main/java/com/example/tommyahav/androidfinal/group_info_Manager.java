@@ -104,7 +104,6 @@ public class group_info_Manager extends Activity {
     }
 
     public List<group_info_recycle_item>  initialFeedListItem(List<group_info_recycle_item>  feedItemList){
-
         for ( int i = 0 ; i < 10 ; i++ ) {
             group_info_recycle_item one = new group_info_recycle_item();
             one.setPersonPic(R.mipmap.image_1);

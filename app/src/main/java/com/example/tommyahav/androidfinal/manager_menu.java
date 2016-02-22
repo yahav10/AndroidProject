@@ -15,15 +15,31 @@ public class manager_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_menu);
 
+
         //group info event listener
         Button groupInfoButton = (Button)findViewById(R.id.groupInfo_button);
         groupInfoButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("groupInfo_button was clicked");
-                Intent to_group_info = new Intent( getApplicationContext() , group_info_Manager.class);
-                startActivity(to_group_info);
+                Intent to_group_info = new Intent( manager_menu.this  , group_info_Manager.class);
+                System.out.println("after intent");
+                try {
+                    startActivity(to_group_info);
+                    System.out.println("after startActivity");
+                    finish();
+                }catch(Exception exception){
+                    System.out.println("error with intent in manager_meu"+exception.getMessage());
+                }
             }
         });
+
+//        private class ButtonHandler implements View.OnClickListener {
+//            public void onClick(View v) {
+//                startActivity(  new Intent( manager_menu.this, group_info_Manager.class)  );
+//            }
+//        }
+
+
 
 
     }
