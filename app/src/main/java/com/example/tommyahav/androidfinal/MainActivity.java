@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i(LOG , "onCreate()");
+        Log.i(LOG , "MainActivity onCreate()");
 
         //logInButton event listender
         Button logInButton = (Button)findViewById(R.id.loginBottun);

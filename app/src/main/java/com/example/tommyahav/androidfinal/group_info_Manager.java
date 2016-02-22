@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.LinearLayout;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -106,8 +108,8 @@ public class group_info_Manager extends Activity {
         for ( int i = 0 ; i < 10 ; i++ ) {
             group_info_recycle_item one = new group_info_recycle_item();
             one.setPersonPic(R.mipmap.image_1);
-            one.setPersonH1("one h1 text");
-            one.setPersonH2("one h2 text");
+            one.setPersonH1(i + " one h1 text");
+            one.setPersonH2(i + " one h2 text");
             one.setPersonThumbnail(R.mipmap.ic_launcher);
             feedItemList.add(one);
         }

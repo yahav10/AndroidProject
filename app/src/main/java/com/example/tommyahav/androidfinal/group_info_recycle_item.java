@@ -51,6 +51,11 @@ public class group_info_recycle_item {
         this._personThumbnail = personThumbnail;
     }
 
+    public void setPersonThumbnail() {
+
+
+    }
+
     @Override
     public String toString() {
         return "group_info_recycle_item{" +

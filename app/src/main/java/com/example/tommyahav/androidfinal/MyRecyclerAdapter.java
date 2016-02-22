@@ -31,7 +31,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item, null);
-
         CustomViewHolder viewHolder = new CustomViewHolder(view);
         return viewHolder;
     }
@@ -58,11 +57,15 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
         customViewHolder._h1.setText("Some initial text one");
         customViewHolder._h2.setText("Some initial text two");
 
-        customViewHolder._h1.setOnClickListener(clickListener);
-        customViewHolder._personPic.setOnClickListener(clickListener);
+        //customViewHolder._h1.setOnClickListener(clickListener);
+        //customViewHolder._personPic.setOnClickListener(clickListener);
+        customViewHolder.itemView.setOnClickListener(clickListener);
+        //(RecyclerView.ViewHolder)this.setOnClickListener(clickListener);
 
-        customViewHolder._h1.setTag(customViewHolder);
-        customViewHolder._personPic.setTag(customViewHolder);
+        //customViewHolder._h1.setTag(customViewHolder);
+        //customViewHolder._personPic.setTag(customViewHolder);
+        customViewHolder.itemView.setTag(customViewHolder);
+
     }
 
 
@@ -71,18 +74,17 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
         public void onClick(View view) {
             CustomViewHolder holder = (CustomViewHolder) view.getTag();
             int position = holder.getPosition();
-
             group_info_recycle_item feedItem = feedItemList.get(position);
             Toast.makeText(mContext, feedItem.getPersonH1(), Toast.LENGTH_SHORT).show();
+
+            removeAt(position);
         }
     };
-
 
     @Override
     public int getItemCount() {
         return (null != feedItemList ? feedItemList.size() : 0);
     }
-
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
         protected TextView _h1;
@@ -96,6 +98,16 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
             this._h1 = (TextView) view.findViewById(R.id.itemh1);
             this._h2 = (TextView) view.findViewById(R.id.itemh2);
             this._personIcon = (ImageView) view.findViewById(R.id.item_icon);
+            System.out.println("Original CustomViewHolder C'tor with" + this.toString());
         }
+
+
     }
+
+    public void removeAt(int position) {
+        feedItemList.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position, feedItemList.size());
+    }
+
 }
