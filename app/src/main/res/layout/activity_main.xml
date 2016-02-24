@@ -16,7 +16,7 @@
 
         <ImageView android:src="@drawable/logonew1"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/logo"
             android:id="@+id/logo"/>
@@ -46,7 +46,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/email_login"
@@ -56,14 +56,14 @@
             android:layout_below="@+id/LogoLayout"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             android:background="#ffffff"
             android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/password_login"
@@ -72,7 +72,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:background="#ffffff"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -83,21 +84,6 @@
         android:layout_below="@+id/LoginTextFildesLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
-
-        <Button
-            android:id="@+id/loginBottun"
-            android:text="Login"
-            android:textColor="#666565"
-            android:textSize="20sp"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:background="@drawable/button"
-            android:layout_below="@+id/password_login"
-            android:layout_centerHorizontal="true"
-            android:clickable="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="20dp" />
 
     </LinearLayout>
 
@@ -113,10 +99,21 @@
         android:elegantTextHeight="false"
         android:textColor="#727272"
         android:textSize="20sp"
-        android:layout_below="@+id/LoginButtonsLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/loginBottun"
+        android:layout_alignStart="@+id/loginBottun"
         android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/loginBottun"
+        android:text="Login"
+        android:textColor="#666565"
+        android:textSize="20sp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:layout_above="@+id/signUp_button"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

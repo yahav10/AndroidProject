@@ -16,7 +16,7 @@
         android:weightSum="1">
     <ImageView android:src="@drawable/logonew1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="15dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/logo"
@@ -67,13 +67,14 @@
         <android.support.v7.widget.RecyclerView
         android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="190dp"
             android:id="@+id/membersListViewToInvite_InviteFriends"
             android:background="#ffffff"
             android:divider="#114f76"
             android:dividerHeight="1dp"
             android:choiceMode="singleChoice"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.34" />
 
         <Button
         android:layout_width="fill_parent"
@@ -86,7 +87,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textSize="20sp"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 
 </RelativeLayout>
