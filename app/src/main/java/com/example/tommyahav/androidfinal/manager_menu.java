@@ -21,14 +21,29 @@ public class manager_menu extends AppCompatActivity {
         groupInfoButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("groupInfo_button was clicked");
-                Intent to_group_info = new Intent( manager_menu.this  , group_info_Manager.class);
+                Intent to_group_info = new Intent(manager_menu.this, group_info_Manager.class);
                 System.out.println("after intent");
                 try {
                     startActivity(to_group_info);
                     System.out.println("after startActivity");
                     finish();
-                }catch(Exception exception){
-                    System.out.println("error with intent in manager_meu"+exception.getMessage());
+                } catch (Exception exception) {
+                    System.out.println("error with intent in manager_meu" + exception.getMessage());
+                }
+            }
+        });
+
+        //group info event listener
+        Button groupTasksButton = (Button)findViewById(R.id.groupTasks_button);
+        groupTasksButton.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("groupTasksButton was clicked");
+                Intent to_group_tasks = new Intent(manager_menu.this, group_tasks_Manager.class);
+                try {
+                    startActivity(to_group_tasks);
+                    //finish();
+                } catch (Exception exception) {
+                    System.out.println("error with intent in manager_meu" + exception.getMessage());
                 }
             }
         });
