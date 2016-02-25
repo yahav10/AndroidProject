@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#00345d"
+    android:id="@+id/pending_LinearLayout">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pending_recyclerView"
+        android:id="@+id/listView_groupTasks_Manager"
+        android:layout_marginTop="5dp"
+        />
+
+</LinearLayout>

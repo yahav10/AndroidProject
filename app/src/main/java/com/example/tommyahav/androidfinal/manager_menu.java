@@ -34,7 +34,7 @@ public class manager_menu extends AppCompatActivity {
         });
 
         //group info event listener
-        Button groupTasksButton = (Button)findViewById(R.id.groupTasks_button);
+        Button groupTasksButton = (Button)findViewById(R.id.tasksList_button);
         groupTasksButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("groupTasksButton was clicked");
