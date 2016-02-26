@@ -1,78 +1,75 @@
 package com.example.tommyahav.androidfinal;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.TabActivity;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.TabHost;
-import android.widget.TabWidget;
 
-public class group_AllTasksTabs_manager extends Activity {
+        //import androidarena.tab.R;
 
-    private ViewPager viewPager;
-    //private TabsPagerAdapter mAdapter;
-    private ActionBar actionBar;
-    // Tab titles
-    private String[] tabs = { "Top Rated", "Games", "Movies" };
+        import android.os.Bundle;
+        import android.app.ActionBar;
+        import android.app.FragmentTransaction;
+        import android.support.v4.app.FragmentActivity;
+        import android.support.v4.view.ViewPager;
+        import android.widget.Toast;
+
+public class group_AllTasksTabs_manager extends FragmentActivity {
+    ViewPager Tab;
+    TabPagerAdapter TabAdapter;
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group__all_tasks_tabs_manager);
+
+        TabAdapter = new TabPagerAdapter(getSupportFragmentManager());
+
+
+        Tab = (ViewPager)findViewById(R.id.pager);
+
+        Tab.setOnPageChangeListener(
+                new ViewPager.SimpleOnPageChangeListener() {
+                    @Override
+                    public void onPageSelected(int position) {
+
+                        actionBar = getActionBar();
+                        actionBar.setSelectedNavigationItem(position);                    }
+                });
+
+        Tab.setAdapter(TabAdapter);
+
+        actionBar = getActionBar();
+
+        //Enable Tabs on Action Bar
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        ActionBar.TabListener tabListener = new ActionBar.TabListener(){
+
+            @Override
+            public void onTabReselected(android.app.ActionBar.Tab tab,
+                                        FragmentTransaction ft) {
+                // TODO Auto-generated method stub
+                //Toast.makeText(getApplicationContext(), "Tab selected").show();
+
+            }
+
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+                Tab.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(android.app.ActionBar.Tab tab,
+                                        FragmentTransaction ft) {
+                // TODO Auto-generated method stub
+
+            }};
+        //Add New Tabs
+        actionBar.addTab(actionBar.newTab().setText("Movie").setTabListener(tabListener));
+        actionBar.addTab(actionBar.newTab().setText("Music").setTabListener(tabListener));
+        actionBar.addTab(actionBar.newTab().setText("Video").setTabListener(tabListener));
+
     }
 
-//        // Initilization
-//        viewPager = (ViewPager) findViewById(R.id.pager);
-//        actionBar = getActionBar();
-//        mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
-//
-//        viewPager.setAdapter(mAdapter);
-//        actionBar.setHomeButtonEnabled(false);
-//        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-//
-//        // Adding Tabs
-//        for (String tab_name : tabs) {
-//            actionBar.addTab(actionBar.newTab().setText(tab_name)
-//                    .setTabListener(this));
-//        }
 
-//        /**
-//         * on swiping the viewpager make respective tab selected
-//         * */
-//        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                // on changing the page
-//                // make respected tab selected
-//                actionBar.setSelectedNavigationItem(position);
-//            }
-//
-//            @Override
-//            public void onPageScrolled(int arg0, float arg1, int arg2) {
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int arg0) {
-//            }
-//        });
-//    }
-//
-//    @Override
-//    public void onTabReselected(Tab tab, FragmentTransaction ft) {
-//    }
-//
-//    @Override
-//    public void onTabSelected(Tab tab, FragmentTransaction ft) {
-//        // on tab selected
-//        // show respected fragment view
-//        viewPager.setCurrentItem(tab.getPosition());
-//    }
-//
-//    @Override
-//    public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-//    }
+
+
 }
