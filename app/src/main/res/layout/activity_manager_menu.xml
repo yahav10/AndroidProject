@@ -14,6 +14,14 @@
         android:id="@+id/gridLayout">
     </GridLayout>
 
+    <ImageView android:src="@drawable/logonew1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/logo"
+        android:id="@+id/logo"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,13 +30,14 @@
         android:height="100dp"
         android:id="@+id/groupTasks_button"
         android:layout_marginEnd="45dp"
-        android:layout_marginTop="94dp"
-        android:background="#607D8B"
+        android:layout_marginTop="100dp"
+        android:background="#002847"
         android:layout_below="@+id/gridLayout"
         android:layout_toLeftOf="@+id/createTask_button"
         android:layout_toStartOf="@+id/createTask_button"
         android:layout_marginRight="45dp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        />
 
     <Button
         android:layout_width="wrap_content"
@@ -40,7 +49,7 @@
         android:layout_marginEnd="49dp"
         android:layout_alignTop="@+id/groupTasks_button"
         android:layout_alignParentEnd="true"
-        android:background="#607D8B"
+        android:background="#002847"
         android:textColor="#ffffff" />
 
     <Button
@@ -51,7 +60,7 @@
         android:height="100dp"
         android:id="@+id/tasksList_button"
         android:layout_alignStart="@+id/groupTasks_button"
-        android:background="#607D8B"
+        android:background="#002847"
         android:clickable="true"
         android:textColor="#ffffff"
         android:layout_marginTop="230dp" />
@@ -66,6 +75,6 @@
         android:layout_marginTop="32dp"
         android:layout_below="@+id/createTask_button"
         android:layout_alignStart="@+id/createTask_button"
-        android:background="#607D8B"
+        android:background="#002847"
         android:textColor="#ffffff" />
 </RelativeLayout>
