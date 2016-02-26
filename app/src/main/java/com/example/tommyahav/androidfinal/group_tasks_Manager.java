@@ -74,7 +74,6 @@ public class group_tasks_Manager extends AppCompatActivity {
             adapter = new MyRecyclerAdapter( group_tasks_Manager.this  , feedItemList);
             mRecyclerView.setAdapter(adapter);
         }
-
         else {
             Log.e(TAG, "Failed to fetch data!");
         }

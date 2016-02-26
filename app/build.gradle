@@ -26,4 +26,5 @@ dependencies {
     compile 'com.android.support:design:23.0.0'
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'org.webjars.bower:github-com-PolymerElements-paper-tabs:1.1.0'
 }
