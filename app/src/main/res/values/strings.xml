@@ -23,5 +23,9 @@
     <string name="title_activity_invite_friends">inviteFriends</string>
     <string name="invite_send_button">Send Invitations</string>
     <string name="recycle_view1">Recycle View1</string>
+    <string name="title_activity_create_new_task">create_new_task</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="NewTask">Create New Task</string>
 
 </resources>

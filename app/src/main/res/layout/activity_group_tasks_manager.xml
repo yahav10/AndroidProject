@@ -9,7 +9,7 @@
 
     <ImageView android:src="@drawable/logonew1"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="40dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/logo"

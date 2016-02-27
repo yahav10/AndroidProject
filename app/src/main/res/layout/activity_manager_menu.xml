@@ -30,7 +30,7 @@
         android:height="100dp"
         android:id="@+id/groupTasks_button"
         android:layout_marginEnd="45dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="110dp"
         android:background="#002847"
         android:layout_below="@+id/gridLayout"
         android:layout_toLeftOf="@+id/createTask_button"
@@ -50,7 +50,8 @@
         android:layout_alignTop="@+id/groupTasks_button"
         android:layout_alignParentEnd="true"
         android:background="#002847"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        />
 
     <Button
         android:layout_width="wrap_content"
@@ -63,7 +64,7 @@
         android:background="#002847"
         android:clickable="true"
         android:textColor="#ffffff"
-        android:layout_marginTop="230dp" />
+        android:layout_marginTop="260dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -72,7 +73,7 @@
         android:width="100dp"
         android:height="100dp"
         android:id="@+id/groupInfo_button"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="49dp"
         android:layout_below="@+id/createTask_button"
         android:layout_alignStart="@+id/createTask_button"
         android:background="#002847"

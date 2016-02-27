@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tommyahav.androidfinal">
+    package="com.example.tommyahav.androidfinal" >
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".group_AllTasksTabs_manager">
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <activity android:name=".group_AllTasksTabs_manager" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +18,11 @@
         <activity android:name=".manager_menu" />
         <activity android:name=".group_tasks_Manager" />
         <activity android:name=".group_info_Manager" />
-        <!--<activity android:name=".group_AllTasksTabs_manager"></activity>-->
+        <!-- <activity android:name=".group_AllTasksTabs_manager"></activity> -->
+        <activity
+            android:name=".create_new_task"
+            android:label="@string/title_activity_create_new_task" >
+        </activity>
     </application>
 
 </manifest>

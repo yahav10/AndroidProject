@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.tommyahav.androidfinal.create_new_task"
+    android:background="#00345d">
+
+    <ImageView android:src="@drawable/logonew1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/logo"
+        android:id="@+id/logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/createNewTask"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/NewTask"
+        android:singleLine="false"
+        android:textSize="27sp"
+        android:textColor="#FFAD33"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Name:"
+        android:id="@+id/newTaskName"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@+id/createNewTask"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/radioTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newTaskName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <RadioButton
+        android:id="@+id/taskDaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily"
+        android:checked="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/newTaskName"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="17dp"/>
+
+    <RadioButton
+        android:id="@+id/taskWeekly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly"
+        android:layout_below="@+id/newTaskName"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:id="@+id/taskMonthly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newTaskName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:id="@+id/taskImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Important"
+            android:checked="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/newTaskName"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="200dp"/>
+
+        <RadioButton
+            android:id="@+id/taskNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:layout_below="@+id/newTaskName"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="200dp"/>
+
+        <RadioButton
+            android:id="@+id/taskLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="200dp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:id="@+id/newTaskDesc"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/radioTask"
+        android:layout_marginTop="20dp"
+        />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        android:id="@+id/newTaskLocation"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/newTaskDesc"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assign To:"
+        android:id="@+id/newTaskAssign"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/newTaskLocation"
+        android:layout_marginTop="15dp"
+        />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/newTaskName"
+        android:layout_toEndOf="@+id/newTaskName"
+        android:layout_below="@+id/newTaskLocation" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="SAVE AND SEND"
+        android:id="@+id/newTaskSaveButton"
+        android:background="@drawable/button"
+        android:textColor="#212121"
+        android:textSize="15sp"
+        android:layout_below="@+id/newTaskAssign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="100dp" />
+
+</RelativeLayout>
