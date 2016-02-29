@@ -27,5 +27,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="NewTask">Create New Task</string>
+    <string name="title_activity_client_menu">client_menu</string>
+    <string name="title_activity_client_personal_info">client_personal_info</string>
 
 </resources>

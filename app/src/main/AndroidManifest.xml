@@ -23,6 +23,14 @@
             android:name=".create_new_task"
             android:label="@string/title_activity_create_new_task" >
         </activity>
+        <activity
+            android:name=".client_menu"
+            android:label="@string/title_activity_client_menu" >
+        </activity>
+        <activity
+            android:name=".client_personal_info"
+            android:label="@string/title_activity_client_personal_info" >
+        </activity>
     </application>
 
 </manifest>

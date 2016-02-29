@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.tommyahav.androidfinal.client_menu"
+    android:background="#00345d">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout">
+    </GridLayout>
+
+    <ImageView android:src="@drawable/logonew1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/logo"
+        android:id="@+id/logo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY TASKS"
+        android:width="100dp"
+        android:height="100dp"
+        android:id="@+id/clientTasks_button"
+        android:layout_marginEnd="40dp"
+        android:background="#002847"
+        android:layout_marginRight="45dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/logo"
+        android:layout_toLeftOf="@+id/personal_Info_button"
+        android:layout_toStartOf="@+id/personal_Info_button"
+        android:layout_marginTop="45dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PERSONAL INFO"
+        android:width="100dp"
+        android:height="100dp"
+        android:id="@+id/personal_Info_button"
+        android:background="#002847"
+        android:textColor="#ffffff"
+        android:layout_marginRight="50dp"
+        android:layout_alignTop="@+id/clientTasks_button"
+        android:layout_alignRight="@+id/logo"
+        android:layout_alignEnd="@+id/logo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/group_info_button"
+        android:width="100dp"
+        android:height="100dp"
+        android:id="@+id/groupInfo_Client_button"
+        android:background="#002847"
+        android:textColor="#ffffff"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/clientTasks_button"
+        android:layout_alignLeft="@+id/clientTasks_button"
+        android:layout_alignStart="@+id/clientTasks_button" />
+
+</RelativeLayout>
