@@ -31,7 +31,7 @@
         android:layout_marginBottom="20dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Group Name:"
         android:id="@+id/group_name_Manager"
@@ -42,6 +42,8 @@
         android:textStyle="bold"
         android:textColor="#ffffff"
         android:layout_marginBottom="20dp" />
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,9 +86,29 @@
         android:text="INVITE"
         android:background="@drawable/button"
         android:id="@+id/invite_groupInfo_Manager_Button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:textSize="10sp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/manger_name_groupInfo_Manager"
+        android:layout_toEndOf="@+id/manger_name_groupInfo_Manager"
+        android:layout_marginBottom="43dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/group_name"
+        android:layout_alignBottom="@+id/group_name_Manager"
+        android:layout_toRightOf="@+id/manger_name_groupInfo_Manager"
+        android:layout_toEndOf="@+id/manger_name_groupInfo_Manager"
+        android:layout_below="@+id/group_info_Manager" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/manager_name"
+        android:layout_alignTop="@+id/manger_name_groupInfo_Manager"
+        android:layout_toRightOf="@+id/group_members_groupInfo_Manager"
+        android:layout_toEndOf="@+id/group_members_groupInfo_Manager"
+        android:layout_alignBottom="@+id/manger_name_groupInfo_Manager" />
 
 </RelativeLayout>

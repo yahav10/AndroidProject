@@ -7,6 +7,8 @@
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity android:name=".group_AllTasksTabs_manager" >
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,6 +32,18 @@
         <activity
             android:name=".client_personal_info"
             android:label="@string/title_activity_client_personal_info" >
+        </activity>
+        <activity
+            android:name=".activeTask"
+            android:label="@string/title_activity_active_task" >
+        </activity>
+        <activity
+            android:name=".pendingTask"
+            android:label="@string/title_activity_pending_task" >
+        </activity>
+        <activity
+            android:name=".completedTask"
+            android:label="@string/title_activity_completed_task" >
         </activity>
     </application>
 

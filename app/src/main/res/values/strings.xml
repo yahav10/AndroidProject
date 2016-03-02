@@ -29,5 +29,8 @@
     <string name="NewTask">Create New Task</string>
     <string name="title_activity_client_menu">client_menu</string>
     <string name="title_activity_client_personal_info">client_personal_info</string>
+    <string name="title_activity_active_task">activeTask</string>
+    <string name="title_activity_pending_task">pendingTask</string>
+    <string name="title_activity_completed_task">completedTask</string>
 
 </resources>

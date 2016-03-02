@@ -60,7 +60,7 @@
         android:textSize="15sp"
         android:layout_below="@+id/FriendEmailTextField_inviteFriends"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="1dp"
         android:layout_marginLeft="100dp" />
 
         <android.support.v7.widget.RecyclerView
