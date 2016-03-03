@@ -37,7 +37,7 @@ public class managerSignUp extends AppCompatActivity {
                 System.out.println("managerSignUpButton was clicked");
                 Intent intent = new Intent(getApplicationContext(), managerInviteFriends.class);
                 startActivity(intent);
-                finish();
+//                finish();
 
             }
         });

@@ -6,9 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
-        <activity android:name=".group_AllTasksTabs_manager" >
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,31 +18,11 @@
         <activity android:name=".manager_menu" />
         <activity android:name=".group_tasks_Manager" />
         <activity android:name=".group_info_Manager" />
-        <!-- <activity android:name=".group_AllTasksTabs_manager"></activity> -->
-        <activity
-            android:name=".create_new_task"
-            android:label="@string/title_activity_create_new_task" >
-        </activity>
-        <activity
-            android:name=".client_menu"
-            android:label="@string/title_activity_client_menu" >
-        </activity>
-        <activity
-            android:name=".client_personal_info"
-            android:label="@string/title_activity_client_personal_info" >
-        </activity>
-        <activity
-            android:name=".activeTask"
-            android:label="@string/title_activity_active_task" >
-        </activity>
-        <activity
-            android:name=".pendingTask"
-            android:label="@string/title_activity_pending_task" >
-        </activity>
-        <activity
-            android:name=".completedTask"
-            android:label="@string/title_activity_completed_task" >
-        </activity>
+         <activity android:name=".group_AllTasksTabs_manager" />
+        <activity android:name=".client_menu"/>
+        <activity android:name=".create_new_task"/>
+        <activity android:name=".client_personal_info"/>
+
     </application>
 
 </manifest>
