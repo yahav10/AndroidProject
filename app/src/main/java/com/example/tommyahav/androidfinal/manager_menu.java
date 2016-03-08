@@ -28,12 +28,12 @@ public class manager_menu extends AppCompatActivity {
                     System.out.println("after startActivity");
                     finish();
                 } catch (Exception exception) {
-                    System.out.println("error with intent in manager_meu" + exception.getMessage());
+                    System.out.println("error with intent in manager_menu" + exception.getMessage());
                 }
             }
         });
 
-        //group info event listener
+        //task list event listener
         Button groupTasksButton = (Button)findViewById(R.id.tasksList_button);
         groupTasksButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -43,7 +43,22 @@ public class manager_menu extends AppCompatActivity {
                     startActivity(to_group_tasks);
                     //finish();
                 } catch (Exception exception) {
-                    System.out.println("error with intent in manager_meu" + exception.getMessage());
+                    System.out.println("error with intent in manager_menu" + exception.getMessage());
+                }
+            }
+        });
+
+        //create task event listener
+        Button createTasksButton = (Button)findViewById(R.id.createTask_button);
+        createTasksButton.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("createTasksButton was clicked");
+                Intent to_create_tasks = new Intent(manager_menu.this, create_new_task.class);
+                try {
+                    startActivity(to_create_tasks);
+                    //finish();
+                } catch (Exception exception) {
+                    System.out.println("error with intent in manager_menu" + exception.getMessage());
                 }
             }
         });
@@ -53,10 +68,6 @@ public class manager_menu extends AppCompatActivity {
 //                startActivity(  new Intent( manager_menu.this, group_info_Manager.class)  );
 //            }
 //        }
-
-
-
-
     }
 
     @Override

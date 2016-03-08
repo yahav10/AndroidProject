@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(LOG , "MainActivity onCreate()");
 
-        //logInButton event listender
+        //logInButton event listener
         Button logInButton = (Button)findViewById(R.id.loginBottun);
         logInButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {

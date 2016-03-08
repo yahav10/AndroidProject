@@ -32,5 +32,6 @@
     <string name="title_activity_active_task">activeTask</string>
     <string name="title_activity_pending_task">pendingTask</string>
     <string name="title_activity_completed_task">completedTask</string>
+    <string name="title_activity_welcome">welcome</string>
 
 </resources>

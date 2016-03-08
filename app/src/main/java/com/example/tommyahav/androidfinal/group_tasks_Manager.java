@@ -1,5 +1,6 @@
 package com.example.tommyahav.androidfinal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +17,8 @@ import java.util.List;
 public class group_tasks_Manager extends AppCompatActivity {
 
     private static final String TAG = "group_tasks_Manager";
-
     private List<group_info_recycle_item> feedItemList = new ArrayList<>();
-
     private RecyclerView mRecyclerView;
-
     private MyRecyclerAdapter adapter;
 
     @Override
@@ -27,12 +27,21 @@ public class group_tasks_Manager extends AppCompatActivity {
         setContentView(R.layout.activity_group_tasks_manager);
         //recyclerView = (RecyclerView)findViewById(R.id.listView2);
 
-        /* Initialize recyclerview */
+        /* Initialize recycle view */
         mRecyclerView = (RecyclerView) findViewById(R.id.listView_groupTasks_Manager);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         feedItemList = initialFeedListItem(feedItemList);
         optionOne();
+
+        /* move to Create new task activity */
+        Button signUpButton = (Button)findViewById(R.id.button1);
+        signUpButton.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("Add Button was clicked");
+                Intent to_create_new_task = new Intent(group_tasks_Manager.this, create_new_task.class);
+                startActivity(to_create_new_task);
+            }
+        });
     }
 
 //    @Override
