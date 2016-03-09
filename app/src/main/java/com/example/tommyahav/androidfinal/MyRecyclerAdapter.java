@@ -2,8 +2,6 @@ package com.example.tommyahav.androidfinal;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +11,6 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -92,6 +89,10 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
         protected ImageView _personPic;
         protected ImageView _personIcon;
 
+        protected TextView _taskNameH1;
+        protected TextView _taskDesH2;
+        protected ImageView _taskThumbnail;
+
         public CustomViewHolder(View view) {
             super(view);
             this._personPic = (ImageView) view.findViewById(R.id.listItemPersonPic);
@@ -101,7 +102,14 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
             System.out.println("Original CustomViewHolder C'tor with" + this.toString());
         }
 
-
+        public CustomViewHolder(View view , int num){
+            super(view);
+            this._personPic = (ImageView) view.findViewById(R.id.listItemPersonPic);
+            this._taskNameH1 = (TextView) view.findViewById(R.id.itemh1);
+            this._taskDesH2 = (TextView) view.findViewById(R.id.itemh2);
+            this._taskThumbnail = (ImageView) view.findViewById(R.id.item_icon);
+            System.out.println("Secondary CustomViewHolder C'tor with" + this.toString());
+        }
     }
 
     public void removeAt(int position) {

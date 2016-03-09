@@ -1,11 +1,10 @@
 package com.example.tommyahav.androidfinal;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
@@ -16,6 +15,7 @@ public class group_tasks_Manager extends AppCompatActivity {
     private static final String TAG = "group_tasks_Manager";
 
     private List<group_info_recycle_item> feedItemList = new ArrayList<>();
+    //private List<task_user> feedItemList = new ArrayList<>();
 
     private RecyclerView mRecyclerView;
 
@@ -65,6 +65,14 @@ public class group_tasks_Manager extends AppCompatActivity {
             one.setPersonH2(i + " one h2 text");
             one.setPersonThumbnail(R.mipmap.ic_launcher);
             feedItemList.add(one);
+        }
+        return feedItemList;
+    }
+
+    public List<task_user> initialFeedListItem2(List<task_user> feedItemList){
+        for ( int i=0 ; i<10 ; i++) {
+            task_user item = new task_user(new task("TaskName1", "TaskDes1"), new user("Tom Goldberg", "a@walla.co.il"));
+            feedItemList.add(item);
         }
         return feedItemList;
     }
