@@ -18,14 +18,11 @@
         <activity android:name=".manager_menu" />
         <activity android:name=".group_tasks_Manager" />
         <activity android:name=".group_info_Manager" />
-        <activity android:name=".group_AllTasksTabs_manager" />
-        <activity android:name=".client_menu" />
-        <activity android:name=".create_new_task" />
-        <activity android:name=".client_personal_info" />
-        <activity
-            android:name=".welcome"
-            android:label="@string/title_activity_welcome" >
-        </activity>
+         <activity android:name=".group_AllTasksTabs_manager" />
+        <activity android:name=".client_menu"/>
+        <activity android:name=".create_new_task"/>
+        <activity android:name=".client_personal_info"/>
+
     </application>
 
 </manifest>
