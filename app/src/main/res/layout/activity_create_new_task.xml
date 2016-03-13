@@ -161,9 +161,12 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/newTaskName"
-        android:layout_toEndOf="@+id/newTaskName"
-        android:layout_below="@+id/newTaskLocation" />
+        android:layout_below="@+id/spinner2"
+        android:layout_alignLeft="@+id/spinner2"
+        android:layout_alignStart="@+id/spinner2"
+        android:layout_above="@+id/newTaskSaveButton"
+        android:layout_alignRight="@+id/spinner2"
+        android:layout_alignEnd="@+id/spinner2" />
 
     <Button
         android:layout_width="150dp"
@@ -177,5 +180,35 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/newTaskName"
+        android:layout_alignRight="@+id/newTaskSaveButton"
+        android:layout_alignEnd="@+id/newTaskSaveButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/newTaskDesc"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_above="@+id/newTaskAssign"
+        android:layout_toRightOf="@+id/newTaskAssign"
+        android:layout_below="@+id/newTaskDesc"
+        android:layout_alignRight="@+id/radioTask"
+        android:layout_alignEnd="@+id/radioTask" />
 
 </RelativeLayout>

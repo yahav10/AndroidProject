@@ -1,6 +1,9 @@
 package com.example.tommyahav.androidfinal;
 
+import android.app.Fragment;
 import android.content.Intent;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,9 +18,8 @@ public class manager_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_menu);
 
-
         //group info event listener
-        Button groupInfoButton = (Button)findViewById(R.id.groupInfo_button);
+        Button groupInfoButton = (Button) findViewById(R.id.groupInfo_button);
         groupInfoButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("groupInfo_button was clicked");
@@ -34,7 +36,7 @@ public class manager_menu extends AppCompatActivity {
         });
 
         //task list event listener
-        Button groupTasksButton = (Button)findViewById(R.id.tasksList_button);
+        Button groupTasksButton = (Button) findViewById(R.id.tasksList_button);
         groupTasksButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("groupTasksButton was clicked");
@@ -49,7 +51,7 @@ public class manager_menu extends AppCompatActivity {
         });
 
         //create task event listener
-        Button createTasksButton = (Button)findViewById(R.id.createTask_button);
+        Button createTasksButton = (Button) findViewById(R.id.createTask_button);
         createTasksButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("createTasksButton was clicked");
@@ -88,7 +90,26 @@ public class manager_menu extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
+
 }
+// Tom
+//    public void onNavigationDrawerItemSelected(int position) {
+//
+//        Fragment objFragment = null;
+//
+//        switch (position) {
+//            case 0:
+//                objFragment = new new_fragment1();
+//            case 1:
+//                objFragment = new new_fragment2();
+//            case 2:
+//                objFragment = new new_fragment3();
+//        }
+//        android.app.FragmentManager fragmentManager = getFragmentManager();
+//        fragmentManager.beginTransaction()
+//                .replace(R.id.container,objFragment);
+//                .commit();
+//    }
+
