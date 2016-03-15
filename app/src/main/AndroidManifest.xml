@@ -5,7 +5,6 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +21,22 @@
         <activity android:name=".client_menu" />
         <activity android:name=".create_new_task" />
         <activity android:name=".client_personal_info" />
-    </application>
+        <activity
+            android:name=".testNavigation"
+            android:label="@string/title_activity_test_navigation" >
+        </activity>
+        <activity
+            android:name=".testNav"
+            android:label="@string/title_activity_test_nav" >
+        </activity>
+        <activity
+            android:name=".Main2ActivityTest"
+            android:label="@string/title_activity_main2_activity_test" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-</manifest>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </manifest>
+

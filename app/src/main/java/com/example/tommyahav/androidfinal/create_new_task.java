@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class create_new_task extends AppCompatActivity {
 
@@ -11,6 +13,8 @@ public class create_new_task extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_new_task);
+        refreshLocation();
+
     }
 
     @Override
@@ -18,6 +22,19 @@ public class create_new_task extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_create_new_task, menu);
         return true;
+    }
+
+    private void refreshLocation() {
+// Array of choices
+        String colors[] = {"class 200", "class 246", "class 247", "class 248", "class 258"};
+
+// Selection of the spinner
+        Spinner spinner2 = (Spinner) findViewById(R.id.location);
+
+// Application of the Array to the Spinner
+        ArrayAdapter<String> spinnerArrayAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, colors);
+        spinnerArrayAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+        spinner2.setAdapter(spinnerArrayAdapter2);
     }
 
     @Override
@@ -35,3 +52,4 @@ public class create_new_task extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+

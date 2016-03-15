@@ -43,5 +43,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
+    <string name="title_activity_test_navigation">testNavigation</string>
+    <string name="title_activity_test_nav">testNav</string>
+    <string name="title_activity_main2_activity_test">Main2ActivityTest</string>
+    <string name="action_settings1">action_settings1</string>
+    <string name="action_settings2">action_settings2</string>
+    <string name="action_settings3">action_settings3</string>
+    <string name="title_activity_drawer_test">drawerTest</string>
 
 </resources>
