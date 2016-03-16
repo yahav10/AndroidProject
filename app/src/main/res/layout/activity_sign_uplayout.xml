@@ -26,7 +26,7 @@
         android:layout_height="40dp"
         android:inputType="textEmailAddress"
         android:hint="Email Address"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="0dp"
         android:background="@drawable/round_edit_text"
         />
@@ -37,8 +37,10 @@
         android:inputType="textPassword"
         android:hint="Password"
         android:background="@drawable/round_edit_text"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="0dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="0dp"
+        android:maxLength="10"
+        />
 
     <EditText android:id="@+id/verify_signup"
         android:layout_width="match_parent"
@@ -46,8 +48,9 @@
         android:inputType="textPassword"
         android:hint="Verify Password"
         android:background="@drawable/round_edit_text"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="0dp"
+        android:maxLength="10"
         />
 
     <EditText android:id="@+id/phone_signup"
@@ -61,7 +64,7 @@
 
     <EditText android:id="@+id/groupName_signup"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
         android:inputType="text"
         android:hint="New Group Name"
         android:background="@drawable/round_edit_text"
@@ -97,8 +100,6 @@
         android:layout_centerHorizontal="true"
         android:clickable="true"
         android:layout_marginLeft="75dp"
-        android:layout_marginTop="15dp" />
-
-
+        android:layout_marginTop="30dp" />
     </LinearLayout>
 </RelativeLayout>

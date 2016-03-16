@@ -42,57 +42,71 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <RadioGroup
-        android:id="@+id/radioTask"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/newTaskName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-    <RadioButton
-        android:id="@+id/taskDaily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daily"
-        android:checked="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/newTaskName"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="17dp"/>
-
-    <RadioButton
-        android:id="@+id/taskWeekly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Weekly"
-        android:layout_below="@+id/newTaskName"
-        android:layout_alignParentStart="true" />
-
-    <RadioButton
-        android:id="@+id/taskMonthly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Monthly"
-        android:layout_centerVertical="true"
+        android:text="Due Date:"
+        android:id="@+id/date"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginTop="45dp"
+        android:layout_alignTop="@+id/newTaskName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    </RadioGroup>
+    <!--<RadioGroup-->
+        <!--android:id="@+id/radioTask"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/newTaskName"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true">-->
 
-    <RadioGroup
-        android:id="@+id/radioTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/newTaskName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+    <!--<RadioButton-->
+        <!--android:id="@+id/taskDaily"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Daily"-->
+        <!--android:checked="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/newTaskName"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_marginTop="17dp"/>-->
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/taskWeekly"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Weekly"-->
+        <!--android:layout_below="@+id/newTaskName"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/taskMonthly"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Monthly"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--</RadioGroup>-->
+
+        <RadioGroup
+            android:id="@+id/radioTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newTaskName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
 
         <RadioButton
             android:id="@+id/taskImportant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Important"
+            android:text="Urgent"
             android:checked="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/newTaskName"
@@ -107,7 +121,8 @@
             android:text="Normal"
             android:layout_below="@+id/newTaskName"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="200dp"/>
+            android:layout_marginLeft="200dp"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/taskLow"
@@ -161,9 +176,12 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/newTaskName"
-        android:layout_toEndOf="@+id/newTaskName"
-        android:layout_below="@+id/newTaskLocation" />
+        android:layout_below="@+id/spinner2"
+        android:layout_alignLeft="@+id/spinner2"
+        android:layout_alignStart="@+id/spinner2"
+        android:layout_above="@+id/newTaskSaveButton"
+        android:layout_alignRight="@+id/spinner2"
+        android:layout_alignEnd="@+id/spinner2" />
 
     <Button
         android:layout_width="150dp"
@@ -177,5 +195,33 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="100dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_above="@+id/newTaskAssign"
+        android:layout_toRightOf="@+id/newTaskAssign"
+        android:layout_below="@+id/newTaskDesc"
+        android:layout_alignRight="@+id/radioTask"
+        android:layout_alignEnd="@+id/radioTask" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskNameField"
+        android:layout_toRightOf="@+id/newTaskDesc"
+        android:layout_alignBottom="@+id/newTaskName"
+        android:layout_alignRight="@+id/newTaskSaveButton"
+        android:layout_alignEnd="@+id/newTaskSaveButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskDescField"
+        android:layout_above="@+id/newTaskLocation"
+        android:layout_toRightOf="@+id/newTaskDesc"
+        android:layout_alignRight="@+id/taskNameField"
+        android:layout_alignEnd="@+id/taskNameField" />
 
 </RelativeLayout>
