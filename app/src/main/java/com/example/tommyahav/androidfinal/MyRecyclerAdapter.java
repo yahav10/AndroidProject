@@ -18,10 +18,16 @@ import java.util.List;
  */
 public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.CustomViewHolder > {
     private List<group_info_recycle_item> feedItemList;
+    private List<task> feedTaskList;
     private Context mContext;
 
     public MyRecyclerAdapter(Context context, List<group_info_recycle_item> feedItemList) {
         this.feedItemList = feedItemList;
+        this.mContext = context;
+    }
+
+    public MyRecyclerAdapter(Context context, List<task> feedItemList , int i) {
+        this.feedTaskList = feedItemList;
         this.mContext = context;
     }
 
@@ -34,8 +40,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
 
     @Override
     public void onBindViewHolder(CustomViewHolder customViewHolder, int i) {
-        System.out.println("-->onBindViewHolder");
         group_info_recycle_item feedItem = feedItemList.get(i);
+        task taskItem = feedTaskList.get(i);
 
         //Download image using picasso library
         Picasso.with(mContext).load(feedItem.getPersonPic())
@@ -50,19 +56,13 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
 
 
         //Setting text view title
-        //customViewHolder._h1.setText(Html.fromHtml(feedItem.getPersonH1()));
-        customViewHolder._h1.setText("Some initial text one");
-        customViewHolder._h2.setText("Some initial text two");
+        customViewHolder._h1.setText(feedItem.getPersonH1());
+        customViewHolder._h2.setText(feedItem.getPersonH2());
 
-        //customViewHolder._h1.setOnClickListener(clickListener);
-        //customViewHolder._personPic.setOnClickListener(clickListener);
         customViewHolder.itemView.setOnClickListener(clickListener);
-        //(RecyclerView.ViewHolder)this.setOnClickListener(clickListener);
 
-        //customViewHolder._h1.setTag(customViewHolder);
         //customViewHolder._personPic.setTag(customViewHolder);
         customViewHolder.itemView.setTag(customViewHolder);
-
     }
 
 
@@ -72,8 +72,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
             CustomViewHolder holder = (CustomViewHolder) view.getTag();
             int position = holder.getPosition();
             group_info_recycle_item feedItem = feedItemList.get(position);
-            Toast.makeText(mContext, feedItem.getPersonH1(), Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(mContext,   feedItem.getPersonH1()  , Toast.LENGTH_SHORT).show();
             removeAt(position);
         }
     };
@@ -88,7 +87,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
         protected TextView _h2;
         protected ImageView _personPic;
         protected ImageView _personIcon;
-
         protected TextView _taskNameH1;
         protected TextView _taskDesH2;
         protected ImageView _taskThumbnail;
@@ -115,7 +113,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter< MyRecyclerAdapter.C
     public void removeAt(int position) {
         feedItemList.remove(position);
         notifyItemRemoved(position);
-        notifyItemRangeChanged(position, feedItemList.size());
+        notifyItemRangeChanged(  position, feedItemList.size()  );
     }
 
 }
