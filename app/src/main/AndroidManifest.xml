@@ -5,28 +5,6 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
-
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.WAKE_LOCK" />
-        <uses-permission android:name="android.permission.VIBRATE" />
-        <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-        <!--
-          GET_ACCOUNTS is only required for GCM on devices running Android lower than
-          4.0.4. You may leave out this permission if you are targetting 4.0.4+.
-        -->
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-
-        <!--
-          IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
-          to match your app's package name + ".permission.C2D_MESSAGE".
-        -->
-        <permission android:protectionLevel="signature"
-            android:name="com.example.tommyahav.androidfinal.permission.C2D_MESSAGE" />
-        <uses-permission android:name="com.example.tommyahav.androidfinal.permission.C2D_MESSAGE" />
-
-
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,47 +17,26 @@
         <activity android:name=".manager_menu" />
         <activity android:name=".group_tasks_Manager" />
         <activity android:name=".group_info_Manager" />
-         <activity android:name=".group_AllTasksTabs_manager" />
-        <activity android:name=".client_menu"/>
-        <activity android:name=".create_new_task"/>
-        <activity android:name=".client_personal_info"/>
-
-
-
-        <meta-data android:name="com.parse.APPLICATION_ID"
-            android:value="OHB5A7s1EGk1uqQUOk0gc6H5qRxgxDE2ziXfCW4T" />
-        <meta-data android:name="com.parse.CLIENT_KEY"
-            android:value="5OuYRnc75VIJXL3flRASViUzpgGz8Vb4jM2xiD2O" />
-
-        <service android:name="com.parse.PushService" />
-        <receiver android:name="com.parse.ParsePushBroadcastReceiver" android:exported="false">
+        <activity android:name=".group_AllTasksTabs_manager" />
+        <activity android:name=".client_menu" />
+        <activity android:name=".create_new_task" />
+        <activity android:name=".client_personal_info" />
+        <activity
+            android:name=".testNavigation"
+            android:label="@string/title_activity_test_navigation" >
+        </activity>
+        <activity
+            android:name=".testNav"
+            android:label="@string/title_activity_test_nav" >
+        </activity>
+        <activity
+            android:name=".Main2ActivityTest"
+            android:label="@string/title_activity_main2_activity_test" >
             <intent-filter>
-                <action android:name="com.parse.push.intent.RECEIVE" />
-                <action android:name="com.parse.push.intent.DELETE" />
-                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </receiver>
-        <receiver android:name="com.parse.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        </activity>
+    </manifest>
 
-                <!--
-                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
-                -->
-                <category android:name="com.example.tommyahav.androidfinal" />
-            </intent-filter>
-        </receiver>
-
-
-
-    </application>
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-
-
-</manifest>
